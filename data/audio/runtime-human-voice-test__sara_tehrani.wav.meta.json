@@ -1,0 +1,8 @@
+{
+  "engine": "edge-neural-human",
+  "voice": "fa-IR-DilaraNeural",
+  "durationSec": 24.89,
+  "sampleRate": 24000,
+  "source": "runtime",
+  "generatedAt": "2026-11-17T15:08:17.084Z"
+}

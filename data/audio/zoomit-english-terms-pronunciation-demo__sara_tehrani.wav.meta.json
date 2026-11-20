@@ -1,0 +1,206 @@
+{
+  "engine": "styletts2-human",
+  "architecture": "StyleTTS 2 (Style Diffusion + PL-BERT + iSTFTNet)",
+  "style_vector_dim": 256,
+  "bilingual": true,
+  "english_preserved": true,
+  "voice_mode": "unified-main",
+  "unified_voice": "fa-IR-FaridNeural",
+  "persona": "assistant-calm",
+  "persona_label": "دستیار هوش مصنوعی (آرام و گرم)",
+  "persona_profile": {
+    "speed": 0.97,
+    "alpha": 0.3,
+    "beta": 0.64,
+    "diffusion_steps": 10,
+    "embedding_scale": 1.08,
+    "cadence_ms": {
+      "inline": 42,
+      "clause": 110,
+      "sentence": 265
+    },
+    "contour": {
+      "declination": 0.035,
+      "final_fall": 0.972,
+      "question_rise": 1.035
+    },
+    "timbre": {
+      "warmth": 0.17,
+      "presence": 0.11,
+      "breath": 0.035
+    },
+    "loudness": {
+      "target_rms": 0.104,
+      "compression": 0.22
+    }
+  },
+  "accent_lock": true,
+  "accent": "fa",
+  "pronunciation_version": "fa-lex-v3-accent-lock",
+  "voice_consistency": 1,
+  "f0_mean_hz": 0,
+  "voice": "fa-IR-FaridNeural",
+  "en_voice": "fa-IR-FaridNeural",
+  "rate": "-3%",
+  "pitch": "+1Hz",
+  "alpha": 0.28,
+  "beta": 0.72,
+  "diffusion_steps": 8,
+  "embedding_scale": 1.15,
+  "ipa_preview": "dɾ ɒːzmvn mdl ˈbiː., teɾɒʃh ˈɑːɹ ˈtiː ˈɛks ˈfaɪv ˈzɪɹoʊ ˈnaɪn ˈzɪɹoʊ ʃɾkt ɛnˈvɪdiə bɒ mʔmɒɾiː ˈblækwɛl, mvtvɾ ˈtɛnsɚ ˈɑːɹ ˈtiː v dɢt ˈɛf ˈpiː ˈeɪt bɒ ɢeiːmæt hzɒɾ v nhsd v nvd v nh dlɒɾ bæɾɾsiː ʃd. mdl ˈʤiː ˈpiː ˈtiː ˈfɔːɹ ˈoʊ ʃɾkt ˈoʊpən ˈ",
+  "sample_rate": 24000,
+  "duration_sec": 45.93,
+  "chunk_count": 37,
+  "synthesized_chunks": 37,
+  "fa_spans": 19,
+  "en_spans": 18,
+  "english_terms_spoken": [
+    {
+      "text": "B",
+      "spoken": "B."
+    },
+    {
+      "text": "RTX 5090",
+      "spoken": "R T X 5090"
+    },
+    {
+      "text": "NVIDIA",
+      "spoken": "NVIDIA"
+    },
+    {
+      "text": "Blackwell",
+      "spoken": "Blackwell"
+    },
+    {
+      "text": "TensorRT",
+      "spoken": "Tensor R T"
+    },
+    {
+      "text": "FP8",
+      "spoken": "F P 8"
+    },
+    {
+      "text": "GPT-4o",
+      "spoken": "G P T 4 O"
+    },
+    {
+      "text": "OpenAI",
+      "spoken": "Open A I"
+    },
+    {
+      "text": "iPhone 17 Pro",
+      "spoken": "iPhone 17 Pro"
+    },
+    {
+      "text": "Galaxy S24 FE",
+      "spoken": "Galaxy S 24 F E"
+    },
+    {
+      "text": "macOS",
+      "spoken": "mac O S"
+    },
+    {
+      "text": "Wi-Fi 7",
+      "spoken": "Wi-Fi 7"
+    },
+    {
+      "text": "USB-C",
+      "spoken": "U S B C"
+    },
+    {
+      "text": "IPv6",
+      "spoken": "I P v 6"
+    },
+    {
+      "text": "Snapdragon 8 Elite",
+      "spoken": "Snapdragon 8 Elite"
+    },
+    {
+      "text": "LTPO AMOLED 120Hz",
+      "spoken": "L T P O AMOLED 120 hertz"
+    },
+    {
+      "text": "6000mAh",
+      "spoken": "6000 milliamp hours"
+    },
+    {
+      "text": "5G",
+      "spoken": "5 G"
+    }
+  ],
+  "spoken_text": "در آزمون مدل B، تِراشه RTX 5090 شرکت NVIDIA با معماری Blackwell، موتور TensorRT و دقت FP8 با قِیمَت هزار و نهصد و نود و نه دلار بَررسی شد. مدل GPT-4o شرکت OpenAI روی iPhone 17 Pro، گوشی Galaxy S24 FE و سیستم‌عامل macOS با شبکه Wi-Fi 7، پورت USB-C و پروتکل IPv6 اجرا می‌شود. پِردازَنده Snapdragon 8 Elite همراه با نِمایشگَر LTPO AMOLED 120Hz، باتری 6000mAh، اینترنت 5G، ضَخامَت هفت ممیز هشت دهم میلی‌متر، ضریب خطای سه ممیز پنج صدم و کاهِش مَصرَف چهل درصد عملکردی کم‌نظیر ارائه می‌دهد.",
+  "missing_chunks": [],
+  "coverage": 1,
+  "chars_per_sec": 10.52,
+  "waveform_peaks": [
+    0.752,
+    0.57,
+    0.866,
+    0.822,
+    0.688,
+    0.61,
+    0.802,
+    0.705,
+    0.598,
+    0.847,
+    0.595,
+    0.59,
+    0.81,
+    0.947,
+    0.752,
+    1,
+    0.681,
+    0.1,
+    0.66,
+    0.791,
+    0.663,
+    0.703,
+    0.693,
+    0.862,
+    0.716,
+    0.946,
+    0.52,
+    0.623,
+    0.75,
+    0.759,
+    0.785,
+    0.754,
+    0.693,
+    0.77,
+    0.625,
+    0.851,
+    0.589,
+    0.913,
+    0.1,
+    0.531,
+    0.737,
+    0.718,
+    0.668,
+    0.773,
+    0.891,
+    0.849,
+    0.646,
+    0.593,
+    0.997,
+    0.515,
+    0.715,
+    0.844,
+    0.751,
+    0.808,
+    0.649,
+    0.767,
+    0.859,
+    0.808,
+    0.918,
+    0.724,
+    0.739,
+    0.679,
+    0.84,
+    0.52
+  ],
+  "durationSec": 45.93,
+  "sampleRate": 24000,
+  "source": "repair",
+  "calibrated_pitch_hz": 1,
+  "generatedAt": "2026-11-18T12:40:08.498Z"
+}

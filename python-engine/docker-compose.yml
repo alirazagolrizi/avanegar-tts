@@ -1,0 +1,64 @@
+version: "3.9"
+
+services:
+  # ۱. سرویس API مدیریت مقالات، کلونینگ و تغذیه ویجت پخش‌کننده
+  tts-api:
+    build: .
+    container_name: avanegar-api
+    env_file: .env
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./models:/srv/avanegar/models:ro
+      - ./storage:/srv/avanegar/storage
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  # ۲. کارگر GPU موتور مرکزی StyleTTS 2 (Style Diffusion + PL-BERT + iSTFTNet 24kHz)
+  tts-gpu-worker:
+    build: .
+    container_name: avanegar-styletts2-worker
+    command: >
+      celery -A app.workers.celery_worker.celery_app worker
+      --loglevel=info
+      --pool=solo
+      --concurrency=1
+      -Q synthesis,finetune
+    env_file: .env
+    volumes:
+      - ./models:/srv/avanegar/models
+      - ./storage:/srv/avanegar/storage
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  # ۳. کارگزار صف پیام محلی
+  redis:
+    image: redis:7.4-alpine
+    container_name: avanegar-redis
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+  # ۴. تحویل پرسرعت فایل‌های صوتی و ویجت JS با پشتیبانی از HTTP Range
+  nginx-cdn:
+    image: nginx:1.27-alpine
+    container_name: avanegar-media
+    ports:
+      - "8081:80"
+    volumes:
+      - ./storage/articles_audio:/usr/share/nginx/html/media/articles:ro
+      - ./widget:/usr/share/nginx/html/widget:ro
+    restart: unless-stopped
+
+volumes:
+  redis_data:

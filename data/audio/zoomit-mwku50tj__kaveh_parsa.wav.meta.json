@@ -1,0 +1,8 @@
+{
+  "engine": "local-formant-fallback",
+  "voice": "offline-oscillator",
+  "durationSec": 1.53,
+  "sampleRate": 24000,
+  "source": "fallback",
+  "generatedAt": "2026-11-17T15:16:31.319Z"
+}

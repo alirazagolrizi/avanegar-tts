@@ -1,0 +1,110 @@
+# ==============================================================================
+# پیکربندی رسمی فاین‌تیون StyleTTS 2 دوزبانه (فارسی + انگلیسی بومی) — config_ft.yml
+# شامل Style Diffusion + PL-BERT + iSTFTNet 24kHz + WavLM SLM Adversarial Loss
+# ==============================================================================
+log_dir: "/srv/avanegar/models/checkpoints/styletts2_dorsa_bilingual_v1"
+save_freq: 5
+log_interval: 20
+device: "cuda"
+epochs: 30
+batch_size: 8
+grad_accum_steps: 4
+max_len: 400 # حداکثر تعداد فریم مِل در آموزش (~۵ ثانیه برای مدیریت بهینه VRAM)
+pretrained_model: "/srv/avanegar/models/styletts2_fa_en_base/epoch_2nd_base.pth"
+second_stage_load_pretrained: true
+load_only_params: true # بارگذاری وزن خالص مدل پایه برای فاین‌تیون دوبلور جدید
+
+# مسیرهای کاملاً لوکال ماژول‌های کمکی (بدون نیاز به اینترنت)
+F0_path: "/srv/avanegar/models/styletts2_fa_en_base/Utils/JDC/bst.t7"
+ASR_config: "/srv/avanegar/models/styletts2_fa_en_base/Utils/ASR/config.yml"
+ASR_path: "/srv/avanegar/models/styletts2_fa_en_base/Utils/ASR/epoch_00080.pth"
+PLBERT_dir: "/srv/avanegar/models/styletts2_fa_en_base/Utils/PLBERT"
+
+data_params:
+  train_data: "/srv/avanegar/storage/datasets/dorsa_studio_24khz_ipa/train_list.txt"
+  val_data: "/srv/avanegar/storage/datasets/dorsa_studio_24khz_ipa/val_list.txt"
+  root_path: "/srv/avanegar/storage/datasets/dorsa_studio_24khz_ipa"
+  OOD_data: "/srv/avanegar/storage/datasets/dorsa_studio_24khz_ipa/OOD_texts.txt"
+  min_length: 50 # حداقل تعداد فریم برای جملات OOD در آموزش خصمانه SLM
+
+preprocess_params:
+  sr: 24000
+  spect_params:
+    n_fft: 2048
+    win_length: 1200
+    hop_length: 300
+    n_mels: 80
+
+model_params:
+  multispeaker: true
+  dim_in: 64
+  hidden_dim: 512
+  max_conv_dim: 512
+  n_layer: 3
+  n_mels: 80
+  n_token: 178 # جدول واجی یکپارچه IPA مشترک بین فارسی (fa) و انگلیسی (en-us)
+  max_dur: 50
+  style_dim: 128 # بردار ۱۲۸ بعدی آکوستیک + ۱۲۸ بعدی پروزودی = ref_s (256-D)
+  dropout: 0.2
+
+  # دیکودر فوق‌سریع و باکیفیت iSTFTNet (قابل تغییر به hifigan)
+  decoder:
+    type: "istftnet"
+    resblock_kernel_sizes: [3, 7, 11]
+    upsample_rates: [10, 6]
+    upsample_initial_channel: 512
+    resblock_dilation_sizes: [[1, 3, 5], [1, 3, 5], [1, 3, 5]]
+    upsample_kernel_sizes: [20, 12]
+    gen_istft_n_fft: 20
+    gen_istft_hop_size: 5
+
+  # مدل زبانی گفتار (WavLM لوکال) برای شباهت انسانی فوق‌العاده
+  slm:
+    model: "/srv/avanegar/models/styletts2_fa_en_base/Utils/wavlm-base-plus"
+    sr: 16000
+    hidden: 768
+    nlayers: 13
+    initial_channel: 64
+
+  # ترنسفورمر انتشار استایل (Style Diffusion — EDM / KDiffusion)
+  diffusion:
+    embedding_mask_proba: 0.1
+    transformer:
+      num_layers: 3
+      num_heads: 8
+      head_features: 64
+      multiplier: 2
+    dist:
+      sigma_data: 0.2
+      estimate_sigma_data: true
+      mean: -3.0
+      std: 1.0
+
+loss_params:
+  lambda_mel: 5.0
+  lambda_gen: 1.0
+  lambda_slm: 1.0
+  lambda_mono: 1.0
+  lambda_s2s: 1.0
+  lambda_F0: 1.0
+  lambda_norm: 1.0
+  lambda_dur: 1.0
+  lambda_ce: 20.0
+  lambda_sty: 1.0
+  lambda_diff: 1.0
+  diff_epoch: 5   # شروع فعال‌سازی Style Diffusion در فاین‌تیون
+  joint_epoch: 15 # شروع آموزش مشترک خصمانه SLM
+
+optimizer_params:
+  lr: 0.0001
+  bert_lr: 0.00001
+  ft_lr: 0.0001
+
+slmadv_params:
+  min_len: 200
+  max_len: 420
+  batch_percentage: 0.5
+  iter: 10
+  thresh: 5
+  scale: 0.01
+  sig: 1.5

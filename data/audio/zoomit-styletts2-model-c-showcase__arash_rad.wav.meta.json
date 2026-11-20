@@ -1,0 +1,162 @@
+{
+  "engine": "styletts2-human",
+  "architecture": "StyleTTS 2 (Style Diffusion + PL-BERT + iSTFTNet)",
+  "style_vector_dim": 256,
+  "bilingual": true,
+  "english_preserved": true,
+  "voice_mode": "unified-main",
+  "unified_voice": "fa-IR-FaridNeural",
+  "accent_lock": true,
+  "accent": "fa",
+  "pronunciation_version": "fa-lex-v3-accent-lock",
+  "voice_consistency": 1,
+  "f0_mean_hz": 0,
+  "voice": "fa-IR-FaridNeural",
+  "en_voice": "fa-IR-FaridNeural",
+  "rate": "+0%",
+  "pitch": "-1Hz",
+  "alpha": 0.3,
+  "beta": 0.68,
+  "diffusion_steps": 7,
+  "embedding_scale": 1.15,
+  "ipa_preview": "dɾ næsl ʤdiːd pltfɾm ɒːvɒnɡɒɾ, mdl ˈsiː. bɒ mvtvɾ mɾkziː style ˈtiː ˈtiː ˈɛs ˈtuː, ɒnkvdɾ vɒʤiː ˈpiː ˈɛl bert, diːkvdɾ ˈaɪ ˈɛs ˈtiː ˈɛf ˈtiː net v ɒːmvzʃ xsmɒnh wave ˈɛl ˈɛm ˈɛs ˈɛl ˈɛm ɾɒh ɒndɒziː ʃd. dɾ ɒiːn mʔmɒɾiː, teɾɒʃh ɛnˈvɪdiə ˈɑːɹ ",
+  "sample_rate": 24000,
+  "duration_sec": 54.3,
+  "chunk_count": 30,
+  "synthesized_chunks": 30,
+  "fa_spans": 16,
+  "en_spans": 14,
+  "english_terms_spoken": [
+    {
+      "text": "C",
+      "spoken": "C."
+    },
+    {
+      "text": "StyleTTS 2",
+      "spoken": "Style T T S 2"
+    },
+    {
+      "text": "PL-BERT",
+      "spoken": "P L BERT"
+    },
+    {
+      "text": "iSTFTNet",
+      "spoken": "I S T F T Net"
+    },
+    {
+      "text": "WavLM SLM",
+      "spoken": "Wave L M S L M"
+    },
+    {
+      "text": "NVIDIA RTX 5090",
+      "spoken": "NVIDIA R T X 5090"
+    },
+    {
+      "text": "GPT-4o",
+      "spoken": "G P T 4 O"
+    },
+    {
+      "text": "Galaxy A57",
+      "spoken": "Galaxy A 57"
+    },
+    {
+      "text": "S25 FE",
+      "spoken": "S 25 F E"
+    },
+    {
+      "text": "A",
+      "spoken": "A."
+    },
+    {
+      "text": "B",
+      "spoken": "B."
+    },
+    {
+      "text": "C",
+      "spoken": "C."
+    },
+    {
+      "text": "LTPO OLED 120Hz",
+      "spoken": "L T P O OLED 120 hertz"
+    },
+    {
+      "text": "-16 LUFS",
+      "spoken": "minus 16 L U F S"
+    }
+  ],
+  "spoken_text": "در نَسل جدید پلتفرم آوانگار، مدل C با موتور مرکزی StyleTTS 2، انکودر واجی PL-BERT، دیکودر iSTFTNet و آموزش خصمانه WavLM SLM راه‌اندازی شد. در این معماری، تِراشه NVIDIA RTX 5090، هوش مَصنوعی GPT-4o، گوشی Galaxy A57 و سری S25 FE همراه با پورت A و B و C و نِمایشگَر LTPO OLED 120Hz دقیقاًً به انگلیسی خوانده می‌شوند. همچنین اعداد تخصصی مانند ضریب خطای سه ممیز پنج صدم، دقت صفر ممیز هشت هزارم، ضَخامَت هفت ممیز چهار دهم میلی‌متر، کاهِش مَصرَف چهل و دو ممیز پنج دهم درصد، قِیمَت هزار و نهصد و نود و نه دلار، ساعت چهارده و پنج دقیقه، گزینه‌های یک، دو، سه و رتبه سی‌ام با بلندی اِستاندارد -16 LUFS بدون کوچک‌ترین خطا تلفظ می‌گردند.",
+  "missing_chunks": [],
+  "coverage": 1,
+  "chars_per_sec": 11.49,
+  "waveform_peaks": [
+    0.831,
+    0.635,
+    0.556,
+    0.478,
+    0.657,
+    0.765,
+    0.686,
+    0.631,
+    0.675,
+    0.608,
+    0.694,
+    0.61,
+    0.721,
+    0.86,
+    0.17,
+    0.599,
+    0.592,
+    0.708,
+    0.641,
+    0.643,
+    0.652,
+    0.552,
+    0.733,
+    0.59,
+    0.669,
+    0.658,
+    0.515,
+    0.535,
+    0.442,
+    0.715,
+    0.773,
+    0.556,
+    0.623,
+    0.558,
+    0.255,
+    0.706,
+    0.926,
+    1,
+    0.829,
+    0.633,
+    0.552,
+    0.558,
+    0.543,
+    0.568,
+    0.751,
+    0.428,
+    0.743,
+    0.603,
+    0.688,
+    0.643,
+    0.758,
+    0.554,
+    0.639,
+    0.47,
+    0.424,
+    0.821,
+    0.753,
+    0.775,
+    0.676,
+    0.716,
+    0.585,
+    0.803,
+    0.692,
+    0.424
+  ],
+  "durationSec": 54.3,
+  "sampleRate": 24000,
+  "source": "repair",
+  "calibrated_pitch_hz": -1,
+  "generatedAt": "2026-11-18T12:23:03.469Z"
+}

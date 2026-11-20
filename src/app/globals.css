@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-vazirmatn), "Vazirmatn", Tahoma, system-ui, sans-serif;
+  --font-mono: var(--font-mono), "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  font-family: var(--font-vazirmatn), "Vazirmatn", Tahoma, system-ui, sans-serif;
+  line-height: 1.7;
+}
+
+.ltr-code {
+  direction: ltr;
+  text-align: left;
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+/* اسکرول‌بار ظریف استودیویی */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

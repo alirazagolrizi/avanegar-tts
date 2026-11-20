@@ -1,0 +1,173 @@
+{
+  "description": "فایل‌های مرجع و مقالات تک‌صدای دوزبانه (Unified-Voice FA + EN) موتور مرکزی StyleTTS 2 — انگلیسی با همان صدای اصلی خوانده می‌شود (رفع باگ مدل B)",
+  "engine": "StyleTTS 2 (Style Diffusion + PL-BERT + iSTFTNet 24kHz)",
+  "voices": {
+    "model_c_female": "fa-IR-DilaraNeural (unified-main: same voice for FA+EN)",
+    "model_b_female": "fa-IR-DilaraNeural (unified-main: same voice for FA+EN)",
+    "model_a_male": "fa-IR-FaridNeural (unified-main: same voice for FA+EN)"
+  },
+  "speakers": [
+    {
+      "filename": "dorsa_radmehr.wav",
+      "voice": "fa-IR-DilaraNeural",
+      "gender": "female",
+      "pitch_hz": -2,
+      "alpha": 0.28,
+      "beta": 0.72,
+      "diffusion_steps": 8,
+      "speed": 1.0,
+      "text": "سلام، من درسا رادمهر هستم؛ گوینده مدل C آموزش‌دیده با موتور مرکزی StyleTTS 2، انکودر PL-BERT و WavLM. مقالات فارسی، اعداد تخصصی و اصطلاحات انگلیسی مانند NVIDIA RTX 5090 و GPT-4o را کاملاً طبیعی روایت می‌کنم.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-DilaraNeural",
+      "persona": "natural"
+    },
+    {
+      "filename": "arash_rad.wav",
+      "voice": "fa-IR-FaridNeural",
+      "gender": "male",
+      "pitch_hz": -4,
+      "speed": 0.96,
+      "text": "سلام، من آرش راد هستم. نسخه صوتی مقالات تخصصی فناوری را با کیفیت استودیویی و کاملاً لوکال روی زیرساخت داخلی شما روایت می‌کنم.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-FaridNeural",
+      "persona": "natural"
+    },
+    {
+      "filename": "sara_tehrani.wav",
+      "voice": "fa-IR-DilaraNeural",
+      "gender": "female",
+      "pitch_hz": 1,
+      "speed": 1.0,
+      "text": "درود بر شما همراهان گرامی. با روایت صوتی دوزبانه تازه‌ترین خبرهای AI، تراشه‌های NVIDIA و نوآوری‌های دنیای دیجیتال در کنار شما هستم.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-DilaraNeural",
+      "persona": "assistant-calm"
+    },
+    {
+      "filename": "kaveh_parsa.wav",
+      "voice": "fa-IR-FaridNeural",
+      "gender": "male",
+      "pitch_hz": 3,
+      "speed": 1.02,
+      "text": "در این بخش تحلیلی، نگاهی عمیق به معماری GPU و NPU نسل جدید و تأثیر اجرای محلی مدل‌های StyleTTS 2 بر حریم خصوصی سازمان‌ها داریم.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-FaridNeural",
+      "persona": "natural"
+    }
+  ],
+  "articles": [
+    {
+      "filename": "zoomit-styletts2-model-c-showcase__dorsa_radmehr.wav",
+      "voice": "fa-IR-DilaraNeural",
+      "gender": "female",
+      "pitch_hz": -2,
+      "alpha": 0.28,
+      "beta": 0.72,
+      "diffusion_steps": 8,
+      "speed": 1.0,
+      "text": "در نسل جدید پلتفرم آوانگار، مدل C با موتور مرکزی StyleTTS 2، انکودر واجی PL-BERT، دیکودر iSTFTNet و آموزش خصمانه WavLM SLM راه‌اندازی شد. در این معماری، تراشه NVIDIA RTX 5090، هوش مصنوعی GPT-4o، گوشی Galaxy A57 و سری S25 FE همراه با پورت A و B و C و نمایشگر LTPO OLED 120Hz دقیقاً به انگلیسی خوانده می‌شوند. همچنین اعداد تخصصی مانند ضریب خطای 3.05، دقت 0.008، ضخامت ۷٫۴ میلی‌متر، کاهش مصرف ٪۴۲٫۵، قیمت $1,999، ساعت ۱۴:۰۵، گزینه‌های ۱،۲،۳ و رتبه ۳۰ام با بلندی استاندارد -16 LUFS بدون کوچک‌ترین خطا تلفظ می‌گردند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-DilaraNeural",
+      "persona": "natural"
+    },
+    {
+      "filename": "zoomit-styletts2-model-c-showcase__sara_tehrani.wav",
+      "voice": "fa-IR-DilaraNeural",
+      "gender": "female",
+      "pitch_hz": 1,
+      "alpha": 0.3,
+      "beta": 0.7,
+      "diffusion_steps": 8,
+      "speed": 1.0,
+      "text": "در نسل جدید پلتفرم آوانگار، مدل C با موتور مرکزی StyleTTS 2، انکودر واجی PL-BERT، دیکودر iSTFTNet و آموزش خصمانه WavLM SLM راه‌اندازی شد. در این معماری، تراشه NVIDIA RTX 5090، هوش مصنوعی GPT-4o، گوشی Galaxy A57 و سری S25 FE همراه با پورت A و B و C و نمایشگر LTPO OLED 120Hz دقیقاً به انگلیسی خوانده می‌شوند. همچنین اعداد تخصصی مانند ضریب خطای 3.05، دقت 0.008، ضخامت ۷٫۴ میلی‌متر، کاهش مصرف ٪۴۲٫۵، قیمت $1,999، ساعت ۱۴:۰۵، گزینه‌های ۱،۲،۳ و رتبه ۳۰ام با بلندی استاندارد -16 LUFS بدون کوچک‌ترین خطا تلفظ می‌گردند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-DilaraNeural",
+      "persona": "assistant-calm"
+    },
+    {
+      "filename": "zoomit-styletts2-model-c-showcase__arash_rad.wav",
+      "voice": "fa-IR-FaridNeural",
+      "gender": "male",
+      "pitch_hz": -2,
+      "alpha": 0.3,
+      "beta": 0.68,
+      "diffusion_steps": 7,
+      "speed": 1.0,
+      "text": "در نسل جدید پلتفرم آوانگار، مدل C با موتور مرکزی StyleTTS 2، انکودر واجی PL-BERT، دیکودر iSTFTNet و آموزش خصمانه WavLM SLM راه‌اندازی شد. در این معماری، تراشه NVIDIA RTX 5090، هوش مصنوعی GPT-4o، گوشی Galaxy A57 و سری S25 FE همراه با پورت A و B و C و نمایشگر LTPO OLED 120Hz دقیقاً به انگلیسی خوانده می‌شوند. همچنین اعداد تخصصی مانند ضریب خطای 3.05، دقت 0.008، ضخامت ۷٫۴ میلی‌متر، کاهش مصرف ٪۴۲٫۵، قیمت $1,999، ساعت ۱۴:۰۵، گزینه‌های ۱،۲،۳ و رتبه ۳۰ام با بلندی استاندارد -16 LUFS بدون کوچک‌ترین خطا تلفظ می‌گردند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-FaridNeural",
+      "persona": "natural"
+    },
+    {
+      "filename": "zoomit-blackwell-local-ai-1404__arash_rad.wav",
+      "voice": "fa-IR-FaridNeural",
+      "gender": "male",
+      "pitch_hz": -2,
+      "speed": 1.0,
+      "text": "نسل جدید شتاب‌دهنده‌های NVIDIA با معماری Blackwell، حافظه پرسرعت VRAM و پشتیبانی بهینه از محاسبات FP16، اجرای محلی مدل‌های عصبی TTS را متحول کرده است. امروزه رسانه‌های بزرگ فارسی‌زبان بدون وابستگی به API خارجی، مقالات خود را در کمتر از ۵ ثانیه روی سرور داخلی با نرخ 24000 Hz و بلندی -16 LUFS به گفتار طبیعی انسان تبدیل می‌کنند و پایداری 100% سرویس B2B را تضمین می‌نمایند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-FaridNeural",
+      "persona": "natural"
+    },
+    {
+      "filename": "zoomit-blackwell-local-ai-1404__sara_tehrani.wav",
+      "voice": "fa-IR-DilaraNeural",
+      "gender": "female",
+      "pitch_hz": 1,
+      "speed": 1.0,
+      "text": "نسل جدید شتاب‌دهنده‌های NVIDIA با معماری Blackwell، حافظه پرسرعت VRAM و پشتیبانی بهینه از محاسبات FP16، اجرای محلی مدل‌های عصبی TTS را متحول کرده است. امروزه رسانه‌های بزرگ فارسی‌زبان بدون وابستگی به API خارجی، مقالات خود را در کمتر از ۵ ثانیه روی سرور داخلی با نرخ 24000 Hz و بلندی -16 LUFS به گفتار طبیعی انسان تبدیل می‌کنند و پایداری 100% سرویس B2B را تضمین می‌نمایند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-DilaraNeural",
+      "persona": "assistant-calm"
+    },
+    {
+      "filename": "zoomit-blackwell-local-ai-1404__kaveh_parsa.wav",
+      "voice": "fa-IR-FaridNeural",
+      "gender": "male",
+      "pitch_hz": 4,
+      "speed": 1.02,
+      "text": "نسل جدید شتاب‌دهنده‌های NVIDIA با معماری Blackwell، حافظه پرسرعت VRAM و پشتیبانی بهینه از محاسبات FP16، اجرای محلی مدل‌های عصبی TTS را متحول کرده است. امروزه رسانه‌های بزرگ فارسی‌زبان بدون وابستگی به API خارجی، مقالات خود را در کمتر از ۵ ثانیه روی سرور داخلی با نرخ 24000 Hz و بلندی -16 LUFS به گفتار طبیعی انسان تبدیل می‌کنند و پایداری 100% سرویس B2B را تضمین می‌نمایند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-FaridNeural",
+      "persona": "natural"
+    },
+    {
+      "filename": "zoomit-oled-display-tech-review__arash_rad.wav",
+      "voice": "fa-IR-FaridNeural",
+      "gender": "male",
+      "pitch_hz": -2,
+      "speed": 1.0,
+      "text": "فناوری نمایشگر OLED دولایه با افزایش روشنایی تا 1600 نیت، دقت رنگی 3.05 و کاهش مصرف باتری به میزان ٪۳۲٫۵، استاندارد تازه‌ای در لپ‌تاپ‌های حرفه‌ای سال ۲۰۲۵ رقم زده است. ترکیب نرخ نوسازی 120Hz با پردازنده‌های مجهز به NPU اختصاصی و درگاه USB-C تجربه‌ای بی‌رقیب فراهم می‌کند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-FaridNeural",
+      "persona": "natural"
+    },
+    {
+      "filename": "zoomit-oled-display-tech-review__sara_tehrani.wav",
+      "voice": "fa-IR-DilaraNeural",
+      "gender": "female",
+      "pitch_hz": 1,
+      "speed": 1.0,
+      "text": "فناوری نمایشگر OLED دولایه با افزایش روشنایی تا 1600 نیت، دقت رنگی 3.05 و کاهش مصرف باتری به میزان ٪۳۲٫۵، استاندارد تازه‌ای در لپ‌تاپ‌های حرفه‌ای سال ۲۰۲۵ رقم زده است. ترکیب نرخ نوسازی 120Hz با پردازنده‌های مجهز به NPU اختصاصی و درگاه USB-C تجربه‌ای بی‌رقیب فراهم می‌کند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-DilaraNeural",
+      "persona": "assistant-calm"
+    },
+    {
+      "filename": "digiato-nvme-gen5-enterprise-guide__kaveh_parsa.wav",
+      "voice": "fa-IR-FaridNeural",
+      "gender": "male",
+      "pitch_hz": 3,
+      "speed": 1.0,
+      "text": "در سرورهای آموزش مدل‌های AI و فاین‌تیون صوتی StyleTTS 2، سرعت خواندن ترتیبی حافظه SSD نقش تعیین‌کننده‌ای در تغذیه بی‌وقفه GPU ایفا می‌کند. درایوهای NVMe با رابط PCIe 5.0 و پهنای باند 14 GB بر ثانیه زمان بارگذاری وزن‌های PL-BERT و WavLM را به کمتر از 1.75 ثانیه کاهش می‌دهند.",
+      "voice_mode": "unified-main",
+      "unified_voice": "fa-IR-FaridNeural",
+      "persona": "natural"
+    }
+  ],
+  "voice_mode": "unified-main",
+  "personas": {
+    "natural": "خوانش خبری طبیعی",
+    "assistant-calm": "دستیار هوش مصنوعی (آرام و گرم)"
+  }
+}
